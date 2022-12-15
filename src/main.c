@@ -18,13 +18,11 @@ int main(void) {
 
   led_init();
   delay_init();
+  lcd_st7789_init();
 
+  GPIO_SetBits(GPIOC, GPIO_Pin_13);
   while(1) {
-    // 清空
-    GPIOC->ODR &= (~GPIO_Pin_13);
-    // 亮灭
-    GPIOC->ODR |= (led << 13);
-    led = !led;
-    delay_ms(500);
+    lcd_st7789_fill_screen(0xf800);
+    lcd_st7789_fill_screen(0);
   }
 }
