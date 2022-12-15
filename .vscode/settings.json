@@ -5,6 +5,7 @@
     "stm32f10x_dma.h": "c",
     "stm32f10x_flash.h": "c",
     "stm32f10x_fsmc.h": "c",
-    "stm32f10x_gpio.h": "c"
+    "stm32f10x_gpio.h": "c",
+    "delay.h": "c"
   }
 }
